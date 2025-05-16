@@ -64,11 +64,9 @@ body {
 
   & .image-container {
     & .omelette-image {
-      width: 375px;
+      width: 100%;
     }
   }
-
-
 
   & .title-intro {
     padding: 30px;
@@ -78,7 +76,10 @@ body {
     }
   }
 
-  & .title, .ingredients-title,.instructions-title, .nutrition-title {
+  & .title,
+  .ingredients-title,
+  .instructions-title,
+  .nutrition-title {
     font-family: "Young Serif";
     font-size: 35px;
     font-weight: 400;
@@ -120,22 +121,22 @@ body {
         margin-left: 15px;
       }
 
-      & .prep-list-item p#item-1{
+      & .prep-list-item p#item-1 {
         position: relative;
         bottom: 10px;
       }
 
-      & .prep-list-item p span{
+      & .prep-list-item p span {
         font-weight: 700;
       }
     }
 
     & .prep-list li:first-child {
-        margin: 10px 10px 0px 5px;
+      margin: 10px 10px 0px 5px;
     }
 
     & .prep-list li:nth-child(2) {
-        margin: 0px 10px 10px 5px;
+      margin: 0px 10px 10px 5px;
     }
   }
 
@@ -143,14 +144,14 @@ body {
     padding: 30px;
 
     .ingredients-list {
-       & .ingredients-list-item {
+      & .ingredients-list-item {
         margin: 0px 0px 10px 25px;
         & p {
           margin-left: 15px;
         }
       }
       & .ingredients-list-item::marker {
-        color: var(--Brown-800)
+        color: var(--Brown-800);
       }
     }
 
@@ -167,15 +168,11 @@ body {
   .divider {
     border-top: 1px solid var(--Stone-150);
     margin: 0 30px;
-
   }
 
   .instructions {
     padding: 30px;
 
-    & .instructions-title {
-
-    }
     & .instructions-list {
       list-style-type: number;
       color: var(--Brown-800);
@@ -207,7 +204,7 @@ body {
     }
 
     & .nutrition-table {
-      border-collapse: collapse; 
+      border-collapse: collapse;
       width: 100%;
       & tr {
         border-bottom: 1px solid var(--Stone-150);
@@ -233,3 +230,68 @@ body {
   }
 }
 
+@media screen and (min-width: 1440px) {
+
+  body {
+    background-color: var(--Stone-100);
+  }
+
+  .main-container {
+    max-width: 700px;
+    padding: 30px;
+    margin: 100px auto;
+    border-radius: 20px;
+
+    & .title-intro,
+    .ingredients,
+    .instructions,
+    .nutrition {
+      padding: 30px 0px;
+    }
+
+    & .title-intro {
+      & .title {
+        font-size: 36px;
+      }
+    }
+
+    & .prep-container {
+      margin: 0px;
+
+      & .prep-title {
+        margin-bottom: 20px;
+      }
+
+      & .prep-list {
+        & .prep-list-item p#item-1 {
+          position: relative;
+          bottom: 0px;
+        }
+      }
+
+      & .prep-list li:first-child {
+        margin: 10px 10px 10px 5px;
+      }
+  
+      & .prep-list li:nth-child(2) {
+        margin: 10px 10px 10px 5px;
+      }
+    }
+
+    & .divider {
+      margin: 0;
+    }
+
+    & .ingredients {
+
+      .ingredients-list li:nth-child(4) {
+        margin-bottom: 10px;
+      }
+
+      .ingredients-list li:last-child p {
+        position: relative;
+        bottom: 0px;
+      }
+    }
+  }
+}

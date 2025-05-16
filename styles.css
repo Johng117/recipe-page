@@ -1,0 +1,235 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Stone-100: hsl(30, 54%, 90%);
+  --Stone-150: hsl(30, 18%, 87%);
+  --Stone-600: hsl(30, 10%, 34%);
+  --Stone-900: hsl(24, 5%, 18%);
+  --Brown-800: hsl(14, 45%, 36%);
+  --Rose-800: hsl(332, 51%, 32%);
+  --Rose-50: hsl(330, 100%, 98%);
+  --font-size: 16px;
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("/assets/fonts/young-serif/YoungSerif-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit";
+}
+
+html {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--Stone-900);
+}
+
+.main-container {
+  max-width: 375px;
+  background-color: var(--White);
+  margin: 0 auto;
+  color: var(--Stone-900);
+
+  & .image-container {
+    & .omelette-image {
+      width: 375px;
+    }
+  }
+
+
+
+  & .title-intro {
+    padding: 30px;
+
+    & .intro {
+      font-size: 16px;
+    }
+  }
+
+  & .title, .ingredients-title,.instructions-title, .nutrition-title {
+    font-family: "Young Serif";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 95%;
+    color: var(--Brown-800);
+    margin-bottom: 20px;
+  }
+
+  & .title {
+    color: var(--Stone-900);
+  }
+
+  & .prep-container {
+    background-color: var(--Rose-50);
+    padding: 25px 20px 15px 20px;
+    margin: 0 30px 20px 30px;
+    border-radius: 10px;
+
+    & .prep-title {
+      color: var(--Rose-800);
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    & .prep-list {
+      list-style-type: disc;
+      margin-left: 20px;
+
+      & .prep-list-item {
+        font-weight: 400;
+        margin: 10px 10px 10px 5px;
+      }
+
+      & .prep-list-item::marker {
+        color: var(--Rose-800);
+      }
+
+      & .prep-list-item p {
+        margin-left: 15px;
+      }
+
+      & .prep-list-item p#item-1{
+        position: relative;
+        bottom: 10px;
+      }
+
+      & .prep-list-item p span{
+        font-weight: 700;
+      }
+    }
+
+    & .prep-list li:first-child {
+        margin: 10px 10px 0px 5px;
+    }
+
+    & .prep-list li:nth-child(2) {
+        margin: 0px 10px 10px 5px;
+    }
+  }
+
+  .ingredients {
+    padding: 30px;
+
+    .ingredients-list {
+       & .ingredients-list-item {
+        margin: 0px 0px 10px 25px;
+        & p {
+          margin-left: 15px;
+        }
+      }
+      & .ingredients-list-item::marker {
+        color: var(--Brown-800)
+      }
+    }
+
+    .ingredients-list li:nth-child(4) {
+      margin-bottom: 20px;
+    }
+
+    .ingredients-list li:last-child p {
+      position: relative;
+      bottom: 10px;
+    }
+  }
+
+  .divider {
+    border-top: 1px solid var(--Stone-150);
+    margin: 0 30px;
+
+  }
+
+  .instructions {
+    padding: 30px;
+
+    & .instructions-title {
+
+    }
+    & .instructions-list {
+      list-style-type: number;
+      color: var(--Brown-800);
+
+      & .instructions-list-item {
+        margin: 0px 0px 10px 25px;
+
+        & p {
+          margin-left: 20px;
+          color: var(--Stone-900);
+
+          & span {
+            font-weight: 700;
+          }
+        }
+      }
+
+      & .instructions-list-item::marker {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .nutrition {
+    padding: 30px;
+
+    & p {
+      margin-bottom: 20px;
+    }
+
+    & .nutrition-table {
+      border-collapse: collapse; 
+      width: 100%;
+      & tr {
+        border-bottom: 1px solid var(--Stone-150);
+      }
+
+      & td {
+        width: 50%;
+      }
+      & .name {
+        padding: 10px 10px 10px 30px;
+      }
+
+      & .value {
+        padding: 10px;
+        color: var(--Brown-800);
+        font-weight: 700;
+      }
+    }
+
+    & .nutrition-table tr:last-child {
+      border-bottom: none;
+    }
+  }
+}
+

@@ -143,6 +143,9 @@ body {
   .ingredients {
     padding: 30px;
 
+    .ingredients-title {
+      font-size: 28px;
+    }
     .ingredients-list {
       & .ingredients-list-item {
         margin: 0px 0px 10px 25px;
@@ -173,6 +176,10 @@ body {
   .instructions {
     padding: 30px;
 
+    .instructions-title {
+      font-size: 28px;
+    }
+
     & .instructions-list {
       list-style-type: number;
       color: var(--Brown-800);
@@ -198,6 +205,10 @@ body {
 
   .nutrition {
     padding: 30px;
+
+    .nutrition-title {
+      font-size: 28px;
+    }
 
     & p {
       margin-bottom: 20px;
